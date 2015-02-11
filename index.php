@@ -161,6 +161,15 @@ for($i = 0; $i < 5; $i++)
     $halVal += $file['0']; //take first part of cut _.png, getting card value and incrementing hand value
     
 }
+
+//TODO: display cards, values, pictures. determine ties/victors
+/*
+ * Pseudocode: loop to find highest value using variables above, then compare to make sure no ties
+ * set message to ___ wins or ____ and ____ tie as necessary
+ * some CSS nonsense w/ html to get pretty picture
+ * Zach/Aneirin can you take care of this?
+ * -Matt
+ */
     
 ?>
 
