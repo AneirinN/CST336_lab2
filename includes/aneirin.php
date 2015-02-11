@@ -35,38 +35,34 @@ $suits = array(
     "21" => "img/diamonds/9.png",
     "22" => "img/diamonds/10.png",
     "23" => "img/diamonds/11.png",
-    "24" => "img/diamonds/",
-    "25" => "img/diamonds/",
-    "26" => "img/diamonds/",
-    "27" => "img/hearts/",
-    "28" => "img/hearts/",
-    "29" => "img/hearts/",
-    "30" => "img/hearts/",
-    "31" => "img/hearts/",
-    "32" => "img/hearts/",
-    "33" => "img/hearts/",
-    "34" => "img/hearts/",
-    "35" => "img/hearts/",
-    "36" => "img/hearts/",
-    "37" => "img/hearts/",
-    "38" => "img/hearts/",
-    "39" => "img/hearts/",
-    "40" => "img/hearts/",
-    "41" => "img/spades/",
-    "42" => "img/spades/",
-    "43" => "img/spades/",
-    "44" => "img/spades/",
-    "45" => "img/spades/",
-    "46" => "img/spades/",
-    "47" => "img/spades/",
-    "48" => "img/spades/",
-    "49" => "img/spades/",
-    "50" => "img/spades/",
-    "51" => "img/spades/",
-    "52" => "img/spades/",
-    "53" => "img/spades/",
-    "54" => "img/spades/",
-    
+    "24" => "img/diamonds/12.png",
+    "25" => "img/diamonds/13.png",
+    "26" => "img/hearts/1.png",
+    "27" => "img/hearts/2.png",
+    "28" => "img/hearts/3.png",
+    "29" => "img/hearts/4.png",
+    "30" => "img/hearts/5.png",
+    "31" => "img/hearts/6.png",
+    "32" => "img/hearts/7.png",
+    "33" => "img/hearts/8.png",
+    "34" => "img/hearts/9.png",
+    "35" => "img/hearts/10.png",
+    "36" => "img/hearts/11.png",
+    "37" => "img/hearts/12.png",
+    "38" => "img/hearts/13.png",
+    "39" => "img/spades/1.png",
+    "40" => "img/spades/2.png",
+    "41" => "img/spades/3.png",
+    "42" => "img/spades/4.png",
+    "43" => "img/spades/5.png",
+    "44" => "img/spades/6.png",
+    "45" => "img/spades/7.png",
+    "46" => "img/spades/8.png",
+    "47" => "img/spades/9.png",
+    "48" => "img/spades/10.png",
+    "49" => "img/spades/11.png",
+    "50" => "img/spades/12.png",
+    "51" => "img/spades/13.png",
 );
 
 
@@ -94,9 +90,6 @@ $suits = array(
     <body>
 
 
-        <!--  -->
-
-        <?= drawCards() ?>  
         <form action="index.php" method="get">
             <input type="submit" value="Play Again">
         </form>
