@@ -1,0 +1,16 @@
+
+
+
+$hand = array();
+
+for (i = 0; i < 5; i++)
+do{
+
+$rNum = rand(1,13);
+} while (in_array($rNum,$hand))
+
+$hand[] = $rNum;
+
+echo "<img src='img/cards/" . generateRandomSuit() . "/$rNum.png'>";
+
+
