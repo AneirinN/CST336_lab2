@@ -18,7 +18,8 @@ for($i = 0; $i < 5; $i++)
     
 }
 
-$matt = array();
+//second player
+$anei = array();
 
 for($i = 0; $i < 5; $i++)
     {
@@ -26,7 +27,7 @@ for($i = 0; $i < 5; $i++)
     $randKey = array_rand($suits);
     $randVal = getArray()[$randKey];
     
-    array_push($matt, $randVal); //put element in hand array
+    array_push($anei, $randVal); //put element in hand array
     
     unset($suits[$randKey]); //remove element from card array
     
@@ -34,5 +35,38 @@ for($i = 0; $i < 5; $i++)
     
 }
 
+//third player
+$zach = array();
+
+for($i = 0; $i < 5; $i++)
+    {
+    
+    $randKey = array_rand($suits);
+    $randVal = getArray()[$randKey];
+    
+    array_push($zach, $randVal); //put element in hand array
+    
+    unset($suits[$randKey]); //remove element from card array
+    
+    //array_values($suits); //reindex array in case of issue with unset + array_rand
+    
+}
+
+//fourth player
+$hal = array();
+
+for($i = 0; $i < 5; $i++)
+    {
+    
+    $randKey = array_rand($suits);
+    $randVal = getArray()[$randKey];
+    
+    array_push($hal, $randVal); //put element in hand array
+    
+    unset($suits[$randKey]); //remove element from card array
+    
+    //array_values($suits); //reindex array in case of issue with unset + array_rand
+    
+}
 
 ?>
