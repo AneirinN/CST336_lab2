@@ -10,58 +10,58 @@
 
 $suits = array(
     
-    "0" => "img/clubs/1.png",
-    "1" => "img/clubs/2.png",
-    "2" => "img/clubs/3.png",
-    "3" => "img/clubs/4.png",
-    "4" => "img/clubs/5.png",
-    "5" => "img/clubs/6.png",
-    "6" => "img/clubs/7.png",
-    "7" => "img/clubs/8.png",
-    "8" => "img/clubs/9.png",
-    "9" => "img/clubs/10.png",
-    "10" => "img/clubs/11.png",
-    "11" => "img/clubs/12.png",
-    "12" => "img/clubs/13.png",
-    "13" => "img/diamonds/1.png",
-    "14" => "img/diamonds/2.png",
-    "15" => "img/diamonds/3.png",
-    "16" => "img/diamonds/4.png",
-    "17" => "img/diamonds/5.png",
-    "18" => "img/diamonds/6.png",
-    "19" => "img/diamonds/7.png",
-    "20" => "img/diamonds/8.png",
-    "21" => "img/diamonds/9.png",
-    "22" => "img/diamonds/10.png",
-    "23" => "img/diamonds/11.png",
-    "24" => "img/diamonds/12.png",
-    "25" => "img/diamonds/13.png",
-    "26" => "img/hearts/1.png",
-    "27" => "img/hearts/2.png",
-    "28" => "img/hearts/3.png",
-    "29" => "img/hearts/4.png",
-    "30" => "img/hearts/5.png",
-    "31" => "img/hearts/6.png",
-    "32" => "img/hearts/7.png",
-    "33" => "img/hearts/8.png",
-    "34" => "img/hearts/9.png",
-    "35" => "img/hearts/10.png",
-    "36" => "img/hearts/11.png",
-    "37" => "img/hearts/12.png",
-    "38" => "img/hearts/13.png",
-    "39" => "img/spades/1.png",
-    "40" => "img/spades/2.png",
-    "41" => "img/spades/3.png",
-    "42" => "img/spades/4.png",
-    "43" => "img/spades/5.png",
-    "44" => "img/spades/6.png",
-    "45" => "img/spades/7.png",
-    "46" => "img/spades/8.png",
-    "47" => "img/spades/9.png",
-    "48" => "img/spades/10.png",
-    "49" => "img/spades/11.png",
-    "50" => "img/spades/12.png",
-    "51" => "img/spades/13.png",
+    "0" => "img/cards/clubs/1.png",
+    "1" => "img/cards/clubs/2.png",
+    "2" => "img/cards/clubs/3.png",
+    "3" => "img/cards/clubs/4.png",
+    "4" => "img/cards/clubs/5.png",
+    "5" => "img/cards/clubs/6.png",
+    "6" => "img/cards/clubs/7.png",
+    "7" => "img/cards/clubs/8.png",
+    "8" => "img/cards/clubs/9.png",
+    "9" => "img/cards/clubs/10.png",
+    "10" => "img/cards/clubs/11.png",
+    "11" => "img/cards/clubs/12.png",
+    "12" => "img/cards/clubs/13.png",
+    "13" => "img/cards/diamonds/1.png",
+    "14" => "img/cards/diamonds/2.png",
+    "15" => "img/cards/diamonds/3.png",
+    "16" => "img/cards/diamonds/4.png",
+    "17" => "img/cards/diamonds/5.png",
+    "18" => "img/cards/diamonds/6.png",
+    "19" => "img/cards/diamonds/7.png",
+    "20" => "img/cards/diamonds/8.png",
+    "21" => "img/cards/diamonds/9.png",
+    "22" => "img/cards/diamonds/10.png",
+    "23" => "img/cards/diamonds/11.png",
+    "24" => "img/cards/diamonds/12.png",
+    "25" => "img/cards/diamonds/13.png",
+    "26" => "img/cards/hearts/1.png",
+    "27" => "img/cards/hearts/2.png",
+    "28" => "img/cards/hearts/3.png",
+    "29" => "img/cards/hearts/4.png",
+    "30" => "img/cards/hearts/5.png",
+    "31" => "img/cards/hearts/6.png",
+    "32" => "img/cards/hearts/7.png",
+    "33" => "img/cards/hearts/8.png",
+    "34" => "img/cards/hearts/9.png",
+    "35" => "img/cards/hearts/10.png",
+    "36" => "img/cards/hearts/11.png",
+    "37" => "img/cards/hearts/12.png",
+    "38" => "img/cards/hearts/13.png",
+    "39" => "img/cards/spades/1.png",
+    "40" => "img/cards/spades/2.png",
+    "41" => "img/cards/spades/3.png",
+    "42" => "img/cards/spades/4.png",
+    "43" => "img/cards/spades/5.png",
+    "44" => "img/cards/spades/6.png",
+    "45" => "img/cards/spades/7.png",
+    "46" => "img/cards/spades/8.png",
+    "47" => "img/cards/spades/9.png",
+    "48" => "img/cards/spades/10.png",
+    "49" => "img/cards/spades/11.png",
+    "50" => "img/cards/spades/12.png",
+    "51" => "img/cards/spades/13.png",
 );
 
 $pointsOff = array(); //array to track deviation from 42
@@ -70,6 +70,8 @@ $pointsOff = array(); //array to track deviation from 42
 
 $matt = array();
 $mattVal = 0;
+echo "<div id='wrapper'>";
+echo "<img src='./img/players/matt.png'>";
 
 for($i = 0; $i < 5; $i++)
     {
@@ -84,12 +86,15 @@ for($i = 0; $i < 5; $i++)
     
     $parts = explode("/", $randVal); //Split string by /'s
     
-    $file = explode(".png", $parts['2']); //take last segment defined by / and cut along .png
-    
-    $mattVal += $file['0']; //take first part of cut _.png, getting card value and incrementing hand value
+    $file = explode(".png", $parts['3']); //take last segment defined by / and cut along .png
+    $file = ($randKey % 13)+1;
+    $mattVal += $file;  //Zach changed it to this because I had to change the array because we were missing the cards folder in all the array.
+    //$mattVal += $file['1']; //take first part of cut _.png, getting card value and incrementing hand value
+    echo "<img src='$randVal'>";
     
 }
-
+    echo "  $mattVal  ";
+    echo "</br>";
 $mattDiff = 0; //Difference defaults to zero, if is different than 42 (greater or less than), if statements catch that
 
 if($mattVal < 42)
@@ -108,7 +113,7 @@ array_push($pointsOff, $mattDiff); //push deviation value onto array
 
 $anei = array();
 $aneiVal = 0;
-
+echo "<img src='./img/players/aneirin.png'>";
 for($i = 0; $i < 5; $i++)
     {
     
@@ -122,12 +127,15 @@ for($i = 0; $i < 5; $i++)
     
     $parts = explode("/", $randVal); //Split string by /'s
     
-    $file = explode(".png", $parts['2']); //take last segment defined by / and cut along .png
-    
-    $aneiVal += $file['0']; //take first part of cut _.png, getting card value and incrementing hand value
+    $file = explode(".png", $parts['3']); //take last segment defined by / and cut along .png
+    $file = ($randKey % 13)+1;
+    $aneiVal += $file;
+    //$aneiVal += $file['1']; //take first part of cut _.png, getting card value and incrementing hand value
+     echo "<img src='$randVal'>";
     
 }
-
+echo "  $aneiVal  ";
+    echo "</br>";
 $aneiDiff = 0; //Difference defaults to zero, if is different than 42 (greater or less than), if statements catch that
 
 if($aneiVal < 42)
@@ -146,6 +154,7 @@ array_push($pointsOff, $aneiDiff); //push deviation value onto array
 
 $zach = array();
 $zachVal = 0;
+echo "<img src='./img/players/zach.png'>";
 
 for($i = 0; $i < 5; $i++)
     {
@@ -160,12 +169,15 @@ for($i = 0; $i < 5; $i++)
     
     $parts = explode("/", $randVal); //Split string by /'s
     
-    $file = explode(".png", $parts['2']); //take last segment defined by / and cut along .png
-    
-    $zachVal += $file['0']; //take first part of cut _.png, getting card value and incrementing hand value
+    $file = explode(".png", $parts['3']); //take last segment defined by / and cut along .png
+    $file = ($randKey % 13)+1;
+    $zachVal += $file;
+    //$zachVal += $file['1']; //take first part of cut _.png, getting card value and incrementing hand value
+    echo "<img src='$randVal'>";
     
 }
-
+echo "  $zachVal  ";
+    echo "</br>";
 $zachDiff = 0; //Difference defaults to zero, if is different than 42 (greater or less than), if statements catch that
 
 if($zachVal < 42)
@@ -185,6 +197,7 @@ array_push($pointsOff, $zachDiff); //push deviation value onto array
 
 $hal = array();
 $halVal = 0;
+echo "<img src='./img/players/hal.png'>";
 
 for($i = 0; $i < 5; $i++)
     {
@@ -199,12 +212,16 @@ for($i = 0; $i < 5; $i++)
     
     $parts = explode("/", $randVal); //Split string by /'s
     
-    $file = explode(".png", $parts['2']); //take last segment defined by / and cut along .png
+    $file = explode(".png", $parts['3']); //take last segment defined by / and cut along .png
+    $file = ($randKey % 13)+1;
+    $halVal += $file;
+    //$halVal += $file['0']; //take first part of cut _.png, getting card value and incrementing hand value
     
-    $halVal += $file['0']; //take first part of cut _.png, getting card value and incrementing hand value
+    echo "<img src='$randVal'>";
     
 }
-
+echo "  $halVal  ";
+    echo "</br>";
 $halDiff = 0; //Difference defaults to zero, if is different than 42 (greater or less than), if statements catch that
 
 if($halVal < 42)
@@ -263,7 +280,7 @@ else //if not, find out who won
             break;
     }
 }
-
+echo "</div>";
 
 //TODO: display cards, values, pictures
 /*
@@ -295,10 +312,13 @@ else //if not, find out who won
             font-size: 6em;
         }
         </style>
+         <link href="css/styles.css" rel="stylesheet" />
     </head>
     
     <body>
-
+        <div id="wrapper">
+            
+        
 
         <!--  -->
 
@@ -306,7 +326,7 @@ else //if not, find out who won
         <form action="index.php" method="get">
             <input type="submit" value="Play Again">
         </form>
-        
+        </div>
         <footer>&copy; Created by: Team 7</footer>
     </body>
 
