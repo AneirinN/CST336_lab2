@@ -66,11 +66,22 @@ $suits = array(
 
 $pointsOff = array(); //array to track deviation from 42
   
-//first player array
+//title of the game
+echo "<div id='wrapper'>
+            <h1>Silverjack</h1> 
+            <h5> (&copy; M. Lara) </h5>";
 
+
+//tried to implement scores in a table, for pretty formatting
+/*
+echo "<table>
+        <tr>
+            <td>";
+*/
+
+//first player array
 $matt = array();
 $mattVal = 0;
-echo "<div id='wrapper'>";
 echo "<img src='./img/players/matt.png'>";
 
 for($i = 0; $i < 5; $i++)
@@ -93,8 +104,14 @@ for($i = 0; $i < 5; $i++)
     echo "<img src='$randVal'>";
     
 }
-    echo "  $mattVal  ";
-    echo "</br>";
+
+//echo "</td>
+//      <td class='score'>";
+      
+echo "$mattVal
+
+    </br>"; //replace with td if using tables
+
 $mattDiff = 0; //Difference defaults to zero, if is different than 42 (greater or less than), if statements catch that
 
 if($mattVal < 42)
@@ -257,6 +274,8 @@ foreach($pointsOff as $key => $value)
     }
 }
 
+
+echo "<h3>";
 if($tie) //check if there is a tie
 {
     echo "It's a Tie";
@@ -280,7 +299,8 @@ else //if not, find out who won
             break;
     }
 }
-echo "</div>";
+echo "</h3>
+        </div>";
 
 //TODO: display cards, values, pictures
 /*
@@ -311,6 +331,9 @@ echo "</div>";
         .symbols {
             font-size: 6em;
         }
+                    
+        
+        
         </style>
          <link href="css/styles.css" rel="stylesheet" />
     </head>
@@ -318,14 +341,22 @@ echo "</div>";
     <body>
         <div id="wrapper">
             
-        
+
 
         <!--  -->
 
-       
+<table>
+   <tr> 
+     <td>
         <form action="index.php" method="get">
-            <input type="submit" value="Play Again">
+            <input id="button" type="submit" value="Play Again">
         </form>
+     </td>
+     <td>
+            <span class='help'>Help<span class='helptext'>Closest to 42 wins!</span></span>
+     </td>
+</tr>
+    </table>        
         </div>
         <footer>&copy; Created by: Team 7</footer>
     </body>
