@@ -6,8 +6,11 @@
     Purpose of the stylesheet follows.
     To change this template use Tools | Templates.
 */
-
-root {
-    display: block;
-}
-
+#wrapper {
+         width: 720px;
+            margin: auto;
+            background: #0bbfbf;
+            padding: 20px;
+            border-radius: 15px;
+    
+        }
